@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/homeaway/homeaway_api_ruby
+docs: https://www.homeaway.com/platform/myClients
+note: >-
+  No OpenAPI is available for HomeAway (brand retired into Expedia Group / Vrbo),
+  so this profile is derived from the first-party Ruby SDK documentation rather
+  than a machine-readable spec. The HomeAway API used OAuth 2.0: applications
+  register for a client id and client secret at the developer platform, then use
+  either two-legged (client-credentials) access for public data or a three-legged
+  authorization-code flow to access a user's personal HomeAway data.
+summary:
+  types: [oauth2]
+  oauth2_flows: [clientCredentials, authorizationCode]
+schemes:
+- name: OAuth2
+  type: oauth2
+  flows:
+  - flow: clientCredentials
+    description: Two-legged client authentication for public API access.
+  - flow: authorizationCode
+    description: Three-legged flow to access an end user's personal HomeAway data.
+  credentials:
+  - client_id
+  - client_secret
+  registration: https://www.homeaway.com/platform/myClients
+  sources: [github.com/homeaway/homeaway_api_ruby]
