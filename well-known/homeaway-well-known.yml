@@ -1,0 +1,22 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.homeaway.com/.well-known/
+host: https://www.homeaway.com
+note: >-
+  homeaway.com now 301-redirects to Vrbo (Expedia Group). The security.txt is
+  served for the homeaway.com domain but resolves to Expedia Group's disclosure
+  program. Other discovery endpoints returned HTTP 429 (rate limited) at probe
+  time rather than a definitive 404.
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  file: homeaway-security.txt
+  note: redirects to https://www.vrbo.com/.well-known/security.txt (Expedia Group)
+- path: /.well-known/openid-configuration
+  status: 429
+- path: /.well-known/oauth-authorization-server
+  status: 429
+- path: /.well-known/api-catalog
+  status: 429
+- path: /.well-known/ai-plugin.json
+  status: 429

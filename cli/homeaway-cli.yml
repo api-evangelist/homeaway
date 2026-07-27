@@ -1,0 +1,21 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/homeaway/homeaway_api_ruby
+note: >-
+  hacurl is a first-party command line utility bundled with the homeaway-api Ruby
+  gem. It lets developers call the HomeAway API without writing code, handling the
+  OAuth 2.0 client-credentials handshake and issuing requests against API paths.
+name: hacurl
+binary: hacurl
+install:
+- method: rubygems
+  command: gem install homeaway-api
+usage: hacurl [options] url
+flags:
+- flag: -i, --client-id CLIENT_ID
+  description: Your HomeAway API client id.
+- flag: -s, --client-secret CLIENT_SECRET
+  description: Your HomeAway API client secret.
+examples:
+- description: Fetch a public listing by id.
+  command: hacurl -i <your_client_id> -s <your_client_secret> /public/listing?id=123456

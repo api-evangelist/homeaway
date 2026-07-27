@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: searched
+source: https://rubygems.org/gems/homeaway-api
+note: >-
+  HomeAway (now Expedia Group / Vrbo) published a first-party Ruby SDK for the
+  HomeAway API from its GitHub org. The brand is retired (homeaway.com redirects
+  to Vrbo) so the SDK is unmaintained, but the package remains real and
+  first-party. No first-party client libraries were found on npm, PyPI, Maven
+  Central, NuGet, pkg.go.dev, Packagist, or crates.io.
+packages:
+- language: ruby
+  registry: rubygems
+  name: homeaway-api
+  url: https://rubygems.org/gems/homeaway-api
+  install: gem install homeaway-api
+  version: 1.4.1
+  downloads: 50893
+  source: https://github.com/homeaway/homeaway_api_ruby
+  official: true
+  description: Ruby SDK for interacting with the HomeAway API (bundles the hacurl CLI).

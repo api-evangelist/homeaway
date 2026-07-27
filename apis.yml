@@ -1,8 +1,14 @@
 aid: homeaway
 name: HomeAway *
-description: 'HomeAway * is a company surfaced as a portfolio company of gv, ivp, redpoint-ventures and
-  added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: >-
+  HomeAway was an Austin, Texas vacation-rental marketplace that connected travelers with owners and
+  property managers of holiday homes, cabins, condos, and beach houses worldwide. It published a
+  first-party HomeAway API (OAuth 2.0) for listing management, availability and booking synchronization,
+  pricing, and guest communication, along with a Ruby SDK and the hacurl command-line tool from its
+  GitHub organization. HomeAway was acquired by Expedia Group in 2015 and the brand was retired into
+  Vrbo: homeaway.com now redirects to Vrbo and the developer platform is no longer maintained. This
+  profile captures the genuine historical first-party API surface (SDK, CLI, OAuth auth model) that
+  remains publicly available.
 url: https://raw.githubusercontent.com/api-evangelist/homeaway/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,12 +18,31 @@ x-backed-by:
 - redpoint-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Consumer
+- Vacation Rentals
+- Travel
+- Hospitality
+- Marketplace
+- Bookings
+- Property Management
+image: https://avatars.githubusercontent.com/u/349558?v=4
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -27,3 +52,28 @@ maintainers:
 common:
 - type: Website
   url: http://www.homeaway.com/
+- type: GitHubOrganization
+  url: https://github.com/homeaway
+- type: Authentication
+  url: authentication/homeaway-authentication.yml
+- type: Packages
+  url: packages/homeaway-packages.yml
+- type: SDKs
+  url: packages/homeaway-packages.yml
+- type: CLI
+  url: cli/homeaway-cli.yml
+- type: WellKnown
+  url: well-known/homeaway-well-known.yml
+- type: SecurityTxt
+  url: well-known/homeaway-security.txt
+- type: DomainSecurity
+  url: security/homeaway-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/homeaway-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.expediagroup.com/about/privacy-data-handling-requirements/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
